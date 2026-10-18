@@ -25,3 +25,13 @@ Mở http://localhost:5173. Tạo bản production bằng `npm run build` và xe
 Dữ liệu khởi tạo từ `Physics Books Library - Sheet1.csv`. Các thông tin bổ sung ở bản dựng đầu tiên (ngày mua, kệ, số lượng) là dữ liệu mẫu cần được người dùng cập nhật. Thay đổi được lưu trong localStorage của trình duyệt; ứng dụng hiện chưa có tài khoản, máy chủ hoặc đồng bộ nhiều thiết bị.
 
 Ảnh AI nằm trong `public/art`; mô tả và prompt được lưu tại `public/art/README.md`.
+
+## GitHub Pages
+
+Workflow `.github/workflows/deploy-pages.yml` build và triển khai mỗi lần push lên `main`, hoặc chạy thủ công bằng nút Run workflow trong tab Actions.
+
+Trong Settings → Pages, chọn Source: GitHub Actions. Repo private cần gói GitHub có hỗ trợ Pages; tài khoản Free cần repository public.
+
+Địa chỉ dự kiến: https://yurikayami.github.io/thu-vien-moc/
+
+Workflow đặt `VITE_BASE_PATH=/thu-vien-moc/` để các đường dẫn script, CSS và ảnh dùng được dưới tên repository. Chạy local vẫn dùng đường dẫn gốc `/`.
